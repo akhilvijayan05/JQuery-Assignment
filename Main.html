@@ -1,0 +1,255 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+<script>
+$(document).ready(function(){
+      $("#table1").show();
+      $("#table2").hide();
+      $("#table3").hide();
+      $("#table4").hide();
+      $("table").append("<br>")
+      $("table").append("© 2017. AUDI AG. All rights reserved")
+  $("input").focus(function(){
+    $(this).css("background-color", "#cccccc");
+});
+$("input").blur(function(){
+    $(this).css("background-color", "#ffffff");
+});
+   $("button").click(function(){
+     if($("#text1").val()==0 || $("#text2").val()==0){
+       alert("Please input both Width and Height")
+     }
+     else {
+        $("#img1").animate({width:$("#text1").val()})
+        $("#img1").animate({height:$("#text2").val()})
+      }
+    });
+    $('button').hover(function(){
+      $(this).css("background-color","#02baff");
+    });
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+    $("#img2").click(function(){
+      $("#table1").show();
+      $("#table2").hide();
+      $("#table3").hide();
+      $("#table4").hide();
+        var image=$("#img2").attr("src");
+        $('#img1').attr("src",image);
+        $("#img1").slideUp(1000).slideDown(1000);
+    });
+    $("#img3").click(function(){
+      $("#table1").hide();
+      $("#table2").show();
+      $("#table3").hide();
+      $("#table4").hide();
+        var image=$("#img3").attr("src");
+        $('#img1').attr("src",image);
+        $("#img1").slideUp(1000).slideDown(1000);
+    });
+    $("#img4").click(function(){
+      $("#table1").hide();
+      $("#table2").hide();
+      $("#table3").show();
+      $("#table4").hide();
+        var image=$("#img4").attr("src");
+        $('#img1').attr("src",image);
+        $("#img1").slideUp(1000).slideDown(1000);
+    });
+    $("#img5").click(function(){
+      $("#table1").hide();
+      $("#table2").hide();
+      $("#table3").hide();
+      $("#table4").show();
+        var image=$("#img5").attr("src");
+        $('#img1').attr("src",image);
+        $("#img1").slideUp(1000).slideDown(1000);
+    });
+    $("#about").click(function(){
+    window.location.href = "About.html"
+    });
+    $("#about1").click(function(){
+    window.location.href = "About.html"
+    });
+});
+</script>
+</head>
+<body>
+  <div class="container-fluid  color">
+<nav class="navbar navbar-inverse navbar-fixed-top hidden-xs hidden-sm" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img src="image/audi.png" height="35" width="100" id="audi" ></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#" id="about">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+<nav class="navbar navbar-inverse hidden-md hidden-lg" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img src="image/audi.png" height="35" width="100" id="audi" ></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#" id="about1">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+<br><br><br>
+<img src="image/image1.png" id="img1" >
+<strong>Input the required height and width of the image:</strong><br>
+Input Width:   <input type="text" id="text1">
+Input Height:  <input type="text" id="text2">
+<button>Move this image...</button>
+
+<div id="flip">Specification</div>
+<div id="panel">
+<table id="table1">
+  <tr>
+    <th colspan="2">Specification</th>
+  </tr>
+  <tr>
+    <td width="80%">Body Type</td>
+    <td width="20%">Convertible</td>
+  </tr>
+  <tr>
+    <td width="80%">Segment</td>
+    <td width="20%">D</td>
+  </tr>
+  <tr>
+    <td width="80%">Engine</td>
+    <td width="20%">40 TFSI</td>
+  </tr>
+  <tr>
+    <td width="80%">Displacement</td>
+    <td width="20%">1395</td>
+  </tr>
+  <tr>
+    <td width="80%">Fuel Type</td>
+    <td width="20%">Petrol</td>
+  </tr>
+</table>
+<table id="table2">
+  <tr>
+    <th colspan="2">Specification</th>
+  </tr>
+  <tr>
+    <td width="80%">Body Type</td>
+    <td width="20%">Sedan</td>
+  </tr>
+  <tr>
+    <td width="80%">Segment</td>
+    <td width="20%">D</td>
+  </tr>
+  <tr>
+    <td width="80%">Engine</td>
+    <td width="20%">1.4 TFSI</td>
+  </tr>
+  <tr>
+    <td width="80%">Displacement</td>
+    <td width="20%">1395</td>
+  </tr>
+  <tr>
+    <td width="80%">Fuel Type</td>
+    <td width="20%">Petrol</td>
+  </tr>
+</table>
+<table id="table3">
+  <tr>
+    <th colspan="2">Specification</th>
+  </tr>
+  <tr>
+    <td width="80%">Body Type</td>
+    <td width="20%">Sedan</td>
+  </tr>
+  <tr>
+    <td width="80%">Segment</td>
+    <td width="20%">D</td>
+  </tr>
+  <tr>
+    <td width="80%">Engine</td>
+    <td width="20%">35 TDI</td>
+  </tr>
+  <tr>
+    <td width="80%">Displacement</td>
+    <td width="20%">1968</td>
+  </tr>
+  <tr>
+    <td width="80%">Fuel Type</td>
+    <td width="20%">Diesel</td>
+  </tr>
+</table>
+<table id="table4">
+  <tr>
+    <th colspan="2">Specification</th>
+  </tr>
+  <tr>
+    <td width="80%">Body Type</td>
+    <td width="20%">Sedan</td>
+  </tr>
+  <tr>
+    <td width="80%">Segment</td>
+    <td width="20%">D</td>
+  </tr>
+  <tr>
+    <td width="80%">Engine</td>
+    <td width="20%">3.0 TDI quattro</td>
+  </tr>
+  <tr>
+    <td width="80%">Displacement</td>
+    <td width="20%">2967</td>
+  </tr>
+  <tr>
+    <td width="80%">Fuel Type</td>
+    <td width="20%">Diesel</td>
+  </tr>
+</table>
+</div>
+<div id="last">
+<div class="col-sm-6 col-xs-12 col-md-3 col-lg-3">
+  <figure>
+<img src="image/image1.png" id="img2" height="150" width="150">
+<figcaption>Audi A3 1.4 TFSI</figcaption>
+</figure>
+</div>
+<div class="col-sm-6 col-xs-12 col-md-3 col-lg-3">
+  <figure>
+<img src="image/image2.png" id="img3" height="150" width="150">
+<figcaption>Audi A4 30 TFSI Premium Plus</figcaption>
+</figure>
+</div>
+<div class="col-sm-6 col-xs-12 col-md-3 col-lg-3">
+  <figure>
+<img src="image/image3.png" id="img4" height="150" width="150">
+<figcaption>Audi A6 35 TDI Matrix</figcaption>
+</figure>
+</div>
+<div class="col-sm-6 col-xs-12 col-md-3 col-lg-3" >
+  <figure>
+<img src="image/image4.jpg" id="img5" height="150" width="150">
+<figcaption>Audi A8 L 50 TDI quattro Premium</figcaption>
+</figure>
+</div>
+</div>
+</body>
+</html>
